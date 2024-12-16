@@ -1,11 +1,6 @@
 package epg.megogo.endpoints;
 
-import org.springframework.web.util.UriComponents;
-import org.springframework.web.util.UriComponentsBuilder;
-
 import java.net.URI;
-import java.net.URL;
-import java.util.List;
 
 import static org.springframework.web.util.UriComponentsBuilder.fromUriString;
 

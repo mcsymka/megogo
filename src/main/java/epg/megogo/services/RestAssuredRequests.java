@@ -1,12 +1,7 @@
 package epg.megogo.services;
 
-import io.restassured.response.ExtractableResponse;
 import io.restassured.specification.RequestSpecification;
-import org.springframework.web.util.UriComponents;
-
 import java.net.URI;
-import java.net.URL;
-import java.util.LinkedHashMap;
 
 import static io.restassured.RestAssured.given;
 

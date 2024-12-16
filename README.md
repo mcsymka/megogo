@@ -6,7 +6,7 @@ This project contains automated tests for validating:
 - The TV schedule for the next 24 hours.
 
 ## Technologies
-- **Java**: Version 17+
+- **Java**: Version 21
 - **TestNG**: Test framework
 - **Rest Assured**: API testing
 - **Maven**: Build tool
@@ -21,7 +21,6 @@ This project contains automated tests for validating:
 1. Clone the repository:
    ```bash
    git clone https://github.com/mcsymka/megogo.git
-   cd <project-directory>
 
 2. Run Tests:
    ```bash

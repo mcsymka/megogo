@@ -1,4 +1,5 @@
 package epg.megogo.dto.time;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 

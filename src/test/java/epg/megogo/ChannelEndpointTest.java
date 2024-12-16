@@ -8,7 +8,6 @@ import org.testng.annotations.Test;
 import epg.megogo.services.RestService;
 
 import java.time.Instant;
-import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 import static org.testng.Assert.assertTrue;
@@ -17,7 +16,6 @@ public class ChannelEndpointTest {
 
     private RestService restService;
     private final String host = "https://epg.megogo.net/";
-    private final String ids = "1639111,1585681,1639231";
 
     @BeforeMethod( alwaysRun = true )
     public void beforeMethod() {
@@ -46,20 +44,6 @@ public class ChannelEndpointTest {
             );
             previousTimestamp = startTimestamp;
         }
-
-
-//        for ( Datum datum : data ) {
-//            List<Program> programs = datum.getPrograms();
-//            long previousTimestamp = 0;
-//            for ( Program program : programs ) {
-//                long startTimestamp = program.getStartTimestamp();
-//                startTimestamp <= currentTimestamp && endTimestamp >= currentTimestamp
-//                        startTimestamp >= previousTimestamp,
-//                        "Programs are not sorted by start_timestamp."
-//                );
-//                previousTimestamp = startTimestamp;
-//            }
-//        }
     }
 
     @Test( dataProvider = "video_id" )

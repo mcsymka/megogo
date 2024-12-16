@@ -43,7 +43,6 @@ public class RestService extends RestAssuredRequests {
         objectMapper.disable(WRITE_DATES_AS_TIMESTAMPS);
         objectMapper.disable(FAIL_ON_UNKNOWN_PROPERTIES);
         objectMapper.disable(FAIL_ON_IGNORED_PROPERTIES);
-        //objectMapper.disable(INCLUDE_SOURCE_IN_LOCATION);
         return objectMapper;
     }
 
