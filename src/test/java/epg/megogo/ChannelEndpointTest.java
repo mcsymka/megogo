@@ -1,10 +1,11 @@
-import dto.channel.Channel;
-import dto.channel.Datum;
-import dto.channel.Program;
+package epg.megogo;
+
+import epg.megogo.dto.channel.Datum;
+import epg.megogo.dto.channel.Program;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import services.RestService;
+import epg.megogo.services.RestService;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
@@ -74,15 +75,14 @@ public class ChannelEndpointTest {
 
     @Test( dataProvider = "video_id" )
     public void testThatNoProgramsFromPastAndMoreThan24Hours( String id ) {
-        long currentTime = Instant.now().getEpochSecond();
-        long currentTimePlus24 = Instant.now().plus( 24, ChronoUnit.HOURS ).getEpochSecond();
         List<Datum> data = restService.getChannel( id ).getData();
         List<Program> programs = data.getFirst().getPrograms();
-        boolean allValid = programs.stream().allMatch(program ->
-                                                              program.getStartTimestamp() >= currentTime &&
-                                                                      program.getEndTimestamp() <= currentTimePlus24
+        long currentTime = Instant.now().getEpochSecond();
+        long currentTime24 = Instant.now().getEpochSecond() + 24 * 3600;
+        boolean allValid = programs.stream().allMatch(
+                program -> program.getEndTimestamp() >= currentTime &&
+                        program.getStartTimestamp() <= currentTime + 24 * 3600
         );
-
         assertTrue(allValid, "There are programs outside the valid 24-hour range.");
     }
 }

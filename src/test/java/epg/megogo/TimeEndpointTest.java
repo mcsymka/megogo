@@ -1,6 +1,8 @@
+package epg.megogo;
+
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import services.RestService;
+import epg.megogo.services.RestService;
 
 import java.time.Instant;
 

@@ -1,11 +1,11 @@
-package services;
+package epg.megogo.services;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import dto.time.Time;
-import dto.channel.Channel;
-import endpoints.MegogoUri;
+import epg.megogo.dto.time.Time;
+import epg.megogo.dto.channel.Channel;
+import epg.megogo.endpoints.MegogoUri;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 

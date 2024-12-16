@@ -1,4 +1,4 @@
-package dto.channel;
+package epg.megogo.dto.channel;
 
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;

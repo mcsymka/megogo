@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="SANITY_SUITE" verbose="1" parallel="methods" thread-count="4">
+    <test name="Smoke suite">
+        <classes>
+            <class name="epg.megogo.TimeEndpointTest"/>
+            <class name="epg.megogo.ChannelEndpointTest"/>
+        </classes>
+    </test>
+</suite>

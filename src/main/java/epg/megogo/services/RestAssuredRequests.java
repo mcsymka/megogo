@@ -1,4 +1,4 @@
-package services;
+package epg.megogo.services;
 
 import io.restassured.response.ExtractableResponse;
 import io.restassured.specification.RequestSpecification;

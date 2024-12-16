@@ -1,4 +1,4 @@
-package endpoints;
+package epg.megogo.endpoints;
 
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
