@@ -8,9 +8,9 @@ import java.io.Serializable;
 @Data
 public class Time implements Serializable {
 
-    @JsonProperty("result")
+    @JsonProperty( "result" )
     public String result;
-    @JsonProperty("data")
+    @JsonProperty( "data" )
     public TimeData data;
 
     @Override

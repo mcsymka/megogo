@@ -1,21 +1,22 @@
 package epg.megogo.dto.channel;
 
-import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+
+import java.util.List;
 
 @Data
 public class Datum {
 
-    @JsonProperty("id")
+    @JsonProperty( "id" )
     public Long id;
-    @JsonProperty("external_id")
+    @JsonProperty( "external_id" )
     public Long externalId;
-    @JsonProperty("title")
+    @JsonProperty( "title" )
     public String title;
-    @JsonProperty("video_id")
+    @JsonProperty( "video_id" )
     public Long videoId;
-    @JsonProperty("programs")
+    @JsonProperty( "programs" )
     public List<Program> programs;
 
 }

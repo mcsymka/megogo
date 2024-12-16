@@ -62,11 +62,10 @@ public class ChannelEndpointTest {
         List<Datum> data = restService.getChannel( id ).getData();
         List<Program> programs = data.getFirst().getPrograms();
         long currentTime = Instant.now().getEpochSecond();
-        long currentTime24 = Instant.now().getEpochSecond() + 24 * 3600;
         boolean allValid = programs.stream().allMatch(
                 program -> program.getEndTimestamp() >= currentTime &&
                         program.getStartTimestamp() <= currentTime + 24 * 3600
         );
-        assertTrue(allValid, "There are programs outside the valid 24-hour range.");
+        assertTrue( allValid, "There are programs outside the valid 24-hour range." );
     }
 }

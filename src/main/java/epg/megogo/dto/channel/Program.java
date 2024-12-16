@@ -6,23 +6,23 @@ import lombok.Data;
 @Data
 public class Program {
 
-    @JsonProperty("external_id")
+    @JsonProperty( "external_id" )
     public Long externalId;
-    @JsonProperty("title")
+    @JsonProperty( "title" )
     public String title;
-    @JsonProperty("start_timestamp")
+    @JsonProperty( "start_timestamp" )
     public Long startTimestamp;
-    @JsonProperty("end_timestamp")
+    @JsonProperty( "end_timestamp" )
     public Long endTimestamp;
-    @JsonProperty("id")
+    @JsonProperty( "id" )
     public Long id;
-    @JsonProperty("start")
+    @JsonProperty( "start" )
     public String start;
-    @JsonProperty("end")
+    @JsonProperty( "end" )
     public String end;
-    @JsonProperty("virtual_object_id")
+    @JsonProperty( "virtual_object_id" )
     public String virtualObjectId;
-    @JsonProperty("schedule_type")
+    @JsonProperty( "schedule_type" )
     public String scheduleType;
 
 }

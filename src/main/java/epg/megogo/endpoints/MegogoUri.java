@@ -22,7 +22,7 @@ public enum MegogoUri {
 
     public URI getChannel( String ids ) {
         return fromUriString( uri )
-                         .queryParam( "video_ids", ids )
-                         .build().toUri();
+                .queryParam( "video_ids", ids )
+                .build().toUri();
     }
 }

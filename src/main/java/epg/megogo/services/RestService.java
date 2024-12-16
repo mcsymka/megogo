@@ -36,13 +36,13 @@ public class RestService extends RestAssuredRequests {
 
     private static ObjectMapper initializeMapper() {
         ObjectMapper objectMapper = new ObjectMapper();
-        objectMapper.setVisibility(objectMapper.getSerializationConfig()
-                                               .getDefaultVisibilityChecker()
-                                               .withFieldVisibility(JsonAutoDetect.Visibility.DEFAULT));
-        objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
-        objectMapper.disable(WRITE_DATES_AS_TIMESTAMPS);
-        objectMapper.disable(FAIL_ON_UNKNOWN_PROPERTIES);
-        objectMapper.disable(FAIL_ON_IGNORED_PROPERTIES);
+        objectMapper.setVisibility( objectMapper.getSerializationConfig()
+                                                .getDefaultVisibilityChecker()
+                                                .withFieldVisibility( JsonAutoDetect.Visibility.DEFAULT ) );
+        objectMapper.setSerializationInclusion( JsonInclude.Include.NON_NULL );
+        objectMapper.disable( WRITE_DATES_AS_TIMESTAMPS );
+        objectMapper.disable( FAIL_ON_UNKNOWN_PROPERTIES );
+        objectMapper.disable( FAIL_ON_IGNORED_PROPERTIES );
         return objectMapper;
     }
 
@@ -56,11 +56,11 @@ public class RestService extends RestAssuredRequests {
         );
     }
 
-    public Channel getChannel(String ids) {
+    public Channel getChannel( String ids ) {
         return readValue(
                 executeGet(
                         specification,
-                        MegogoUri.CHANNEL.getChannel(ids)
+                        MegogoUri.CHANNEL.getChannel( ids )
                 ),
                 Channel.class
         );

@@ -23,7 +23,9 @@ public class TimeEndpointTest {
         long requestStart = Instant.now().getEpochSecond();
         long serverTime = restService.getTime().getData().getTimestamp();
         long requestEnd = Instant.now().getEpochSecond();
-        assertTrue(serverTime >= requestStart && serverTime <= requestEnd,
-                   "Server time is outside the expected range.");
+        assertTrue(
+                serverTime >= requestStart && serverTime <= requestEnd,
+                "Server time is outside the expected range."
+        );
     }
 }

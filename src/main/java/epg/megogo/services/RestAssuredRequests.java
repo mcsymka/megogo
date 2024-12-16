@@ -1,6 +1,7 @@
 package epg.megogo.services;
 
 import io.restassured.specification.RequestSpecification;
+
 import java.net.URI;
 
 import static io.restassured.RestAssured.given;

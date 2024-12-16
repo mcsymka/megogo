@@ -6,16 +6,16 @@ import lombok.Data;
 @Data
 public class TimeData {
 
-    @JsonProperty("utc_offset")
+    @JsonProperty( "utc_offset" )
     public Long utcOffset;
-    @JsonProperty("timestamp_gmt")
+    @JsonProperty( "timestamp_gmt" )
     public Long timestampGmt;
-    @JsonProperty("timestamp_local")
+    @JsonProperty( "timestamp_local" )
     public Long timestampLocal;
-    @JsonProperty("timezone")
+    @JsonProperty( "timezone" )
     public String timezone;
-    @JsonProperty("time_local")
+    @JsonProperty( "time_local" )
     public String timeLocal;
-    @JsonProperty("timestamp")
+    @JsonProperty( "timestamp" )
     public Long timestamp;
 }
